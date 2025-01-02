@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer tailwind-base, antd;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+@layer base {
+  body {
+    @apply h-dvh overflow-x-hidden overflow-y-hidden;
+  }
+}

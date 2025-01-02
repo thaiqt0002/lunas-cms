@@ -1,0 +1,49 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:tailwindcss/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["simple-import-sort", "unused-imports"],
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "out/",
+    "public/",
+    "tailwind.config.ts",
+    "postcss.config.js",
+    "src/libs/zustands/selector.tsx",
+    "src/types/base.ts"
+  ],
+  "rules": {
+    "no-console": "warn",
+    "no-lonely-if": "warn",
+    "no-trailing-spaces": "warn",
+    "tailwindcss/no-custom-classname": "off",
+    "unused-imports/no-unused-imports": "warn",
+    "simple-import-sort/exports": "warn",
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          ["^\\u0000"],
+          ["^next", "^react", "^recoil", "^@?\\w"],
+          ["^@core/"],
+          ["^@/"],
+          ["^.+\\.s?css$"],
+          [
+            "^\\./?$",
+            "^\\.(?!/?$)",
+            "^\\.\\./?$",
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./\\.\\./?$",
+            "^\\.\\./\\.\\.(?!/?$)",
+            "^\\.\\./\\.\\./\\.\\./?$",
+            "^\\.\\./\\.\\./\\.\\.(?!/?$)"
+          ],
+          ["^"]
+        ]
+      }
+    ]
+  }
+}
